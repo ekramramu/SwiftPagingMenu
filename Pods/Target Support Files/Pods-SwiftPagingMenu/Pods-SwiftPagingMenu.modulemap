@@ -1,0 +1,6 @@
+framework module Pods_SwiftPagingMenu {
+  umbrella header "Pods-SwiftPagingMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}
