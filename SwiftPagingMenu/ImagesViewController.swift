@@ -50,18 +50,18 @@ class ImagesViewController: UIViewController {
 }
 
 extension ImagesViewController: UICollectionViewDelegateFlowLayout {
-  
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    return CGSize(
-//      width: collectionView.bounds.width/2,
-//      height: 220)
-//  }
-    
+
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             let width = collectionView.bounds.width
+        
+        if  indexPath.row != 0 && (indexPath.row % 6) == 0 {
+            print("index ; \(indexPath.row)")
+            return CGSize(width: ((width - 12)) - 12, height: CGFloat(collectionView.bounds.height/2) + 14)
+        } else{
             return CGSize(width: ((width - 12) / 2) - 12, height: CGFloat(collectionView.bounds.height/2) + 14)
             
         }
+    }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -95,7 +95,10 @@ extension ImagesViewController: UICollectionViewDataSource {
   }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "DetailVC") as! DetailVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
   
 }

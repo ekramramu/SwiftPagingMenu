@@ -41,7 +41,6 @@ class ViewController: UIViewController {
     "Sydney",
     "Melbourne"
   ]
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -52,10 +51,16 @@ class ViewController: UIViewController {
     // Add the paging view controller as a child view controller and
     // contrain it to all edges.
     addChild(pagingViewController)
+    pagingViewController.view.frame = self.view.frame
     view.addSubview(pagingViewController.view)
-    view.constrainToEdges(pagingViewController.view)
+    //view.constrainToEdges(pagingViewController.view)
     pagingViewController.didMove(toParent: self)
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
   
 }
 

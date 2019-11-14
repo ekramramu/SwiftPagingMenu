@@ -12,16 +12,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftPagingMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="V95-zb-oGs"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="89.732142857142847"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="oUk-6Q-jDP">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="Bq0-aj-q0G" customClass="DetailVC" customModule="SwiftPagingMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3FL-2a-Ttx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee-1" translatesAutoresizingMaskIntoConstraints="NO" id="qIe-Nb-JkD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="352"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="352" id="PBI-oe-jNz"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qIe-Nb-JkD" firstAttribute="leading" secondItem="W5O-E1-JbA" secondAttribute="leading" id="0In-8u-aDv"/>
+                            <constraint firstItem="qIe-Nb-JkD" firstAttribute="top" secondItem="3FL-2a-Ttx" secondAttribute="top" id="6Rb-DE-W1j"/>
+                            <constraint firstItem="qIe-Nb-JkD" firstAttribute="trailing" secondItem="W5O-E1-JbA" secondAttribute="trailing" id="VcP-fk-H8d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="W5O-E1-JbA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QXA-WV-GVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1895.6521739130437" y="89.732142857142847"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yPx-T4-Hrm">
@@ -42,4 +71,7 @@
             <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="coffee-1" width="400" height="267"/>
+    </resources>
 </document>
